@@ -1,16 +1,17 @@
-import axios from "axios";
-import fetch from "node-fetch";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
 
-async function getData(userId){
-    const data = await (await fetch(`https://jsonplaceholder.typicode.com/users + ${userId}`)).json()
-    const post = await (await fetch(`https://jsonplaceholder.typicode.com/posts?userId=${userId}`)).json()
-    const newArray =[]
-    newArray.push(data,post) 
-console.log(newArray)
 
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+ <div>
+ <App />
+ </div>
    
-}
+ 
+);
 
-getData(1)
 
 
